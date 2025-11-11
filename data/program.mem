@@ -1,0 +1,29 @@
+// 11-bit Machine Code Program Memory
+// Format: [10:8] opcode | [7:4] op1 (address) | [3:0] op2 (data/constant)
+//
+// Assembly Program:
+// Addr 0x0: STO 0x4 0x5  → Store 0x5 to memory[0x4]
+// Addr 0x1: ADD 0x4 0x6  → Add 0x6 to memory[0x4], store result in memory[0x4]
+// Addr 0x2: STO 0x1 0xF  → Store 0xF to memory[0x1]
+// Addr 0x3: SUB 0x1 0x7  → Subtract 0x7 from memory[0x1], store result in memory[0x1]
+// Addr 0x4: NOT 0xF 0x0  → NOT memory[0xF], store result in memory[0xF] (op2 padded)
+//
+// Opcode encoding:
+// 000 = STO, 001 = ADD, 010 = SUB, 011 = AND, 100 = OR, 101 = XOR, 110 = NOT
+
+00001000101
+00101000110
+00000011111
+01000010111
+11011110000
+00000000000
+00000000000
+00000000000
+00000000000
+00000000000
+00000000000
+00000000000
+00000000000
+00000000000
+00000000000
+00000000000
