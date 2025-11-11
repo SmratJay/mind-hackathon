@@ -1,17 +1,91 @@
-# 4-Bit Load-Store Processor - Hackathon Submission
+# 🚀 4-Bit Load-Store Processor - Mind Hackathon 2025
 
-A constraint-driven 4-bit processor implementation in Verilog HDL, designed using hierarchical component reuse and strict RTL synthesis guidelines.
+A complete 4-bit processor implementation with **Interactive Python GUI Simulator**, Verilog RTL modules, and comprehensive testbenches.
 
 ## 🎯 Project Overview
 
-This project implements a complete 4-bit load-store processor with:
-- **Custom ALU** supporting 7 operations (add, subtract, AND, OR, XOR, NOT, transfer)
-- **5-state FSM controller** (INIT → FETCH → LOAD → EXECUTE → STORE)
-- **16×4 synchronous RAM** with program/data memory
-- **Hierarchical component design** enforcing structural reuse
-- **Active-low asynchronous reset** for all sequential elements
+### Hardware Implementation (Verilog)
+- **9 RTL modules** - Complete processor implementation (813 lines)
+- **6 testbenches** - Full verification suite (402 lines)
+- **Custom components** - XOR gate, Full Adder, Ripple-Carry Adder, ALU
+- **5-state FSM** - INIT → FETCH → LOAD → EXECUTE → STORE
+- **16×4 RAM** - Both synchronous and asynchronous variants
+- **7-instruction ISA** - STO, ADD, SUB, AND, OR, XOR, NOT
 
-### Key Design Constraints
+### Software Simulator (Python)
+- **Modern GUI** - Dark theme with real-time visualizations
+- **Assembly Editor** - Write and compile programs
+- **ALU Visualizer** - Gate-level animation during execution
+- **RAM Timing Comparison** - Async vs Sync side-by-side
+- **Critical Path Analyzer** - Timing bottleneck identification
+- **Scrollable Interface** - Access all features easily
+
+---
+
+## 📦 Installation for Your Friend
+
+### Requirements
+- **Python 3.7+** (no external packages needed!)
+- All imports are from Python's standard library
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/mind-hackathon.git
+cd mind-hackathon
+```
+
+### Step 2: Run the Simulator (No Installation Needed!)
+
+```bash
+python simulator_gui.py
+```
+
+**That's it!** No `pip install` required. Everything is built-in. ✨
+
+### Linux Users: If tkinter is missing
+
+```bash
+# Ubuntu/Debian
+sudo apt-get install python3-tk
+
+# Fedora
+sudo dnf install python3-tkinter
+
+# Arch
+sudo pacman -S tk
+```
+
+---
+
+## 🎮 Quick Start Guide
+
+### 1. **Run the GUI**
+```bash
+python simulator_gui.py
+```
+
+### 2. **Load an Example Program**
+- Click **"Load Example"** button
+- 8 different random examples available
+- Each click loads a new program!
+
+### 3. **Execute the Program**
+- **Step** - Execute one cycle at a time
+- **Run** - Continuous execution (300ms delay)
+- **Reset** - Return to initial state
+
+### 4. **Explore Features**
+- **Scroll down** to see:
+  - ⚡ RAM timing comparison
+  - 📊 Waveforms
+  - 📝 Execution log
+- Watch **ALU Visualizer** highlight during EXECUTE
+- View **Critical Path Analysis** for timing
+
+---
+
+## 🎓 Key Design Constraints
 
 The design enforces strict architectural constraints to demonstrate proper RTL methodology:
 
